@@ -1,0 +1,25 @@
+.header{
+    background-color: #252525;
+    padding: 20px 0;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-logo{
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    &-nav{
+        display: flex;
+        column-gap: 20px;
+        a{
+            font-size: 24px;
+        }
+    }
+}
