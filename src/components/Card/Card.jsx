@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import './card.scss';
+import { useCartStore } from "../../store/store";
 
 const Card = ({ item }) => {
+    const addCart = useCartStore(s => s.addCart);
     return (
         <div className="card">
             <Link to={`/product/${item.id}`}>
@@ -17,7 +19,9 @@ const Card = ({ item }) => {
             </Link>
             <div className="card-block">
                 <p className="card-price">${item.price}</p>
-                <button>buy</button>
+                <button onClick={()=>{
+                    addCart(item);
+                }}>buy</button>
             </div>
         </div>
     );
